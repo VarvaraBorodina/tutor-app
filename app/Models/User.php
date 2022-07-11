@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Nette\Utils\Image;
 
 class User extends Authenticatable
 {
@@ -18,10 +19,26 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
         'email',
         'password',
+        'last_name',
+        'name',
+        'second_name',
+        'role',
+        'phone'
     ];
+
+    //role 1 - teacher, 2 - user
+
+    public function teacher(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
+        return $this->hasOne(Teacher::class);
+    }
+
+    public function order(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Order::class, 'student_user_id');
+    }
 
     /**
      * The attributes that should be hidden for serialization.

@@ -1,0 +1,147 @@
+html,
+body,* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(var(--lighter-color), #fff);
+    height: 100vh;
+}
+
+.info {
+    width: 25%;
+}
+
+.info__top {
+    padding: 50px 50px;
+    background-color: var(--custom-color);
+    color: #ffffff;
+    font-size: 36px;
+}
+
+.info__bottom {
+    padding: 50px 50px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info__field {
+    margin-top: 10px;
+}
+
+.logout_button {
+    width: 60%;
+    min-width: 100px;
+    height: 50px;
+    margin-top: 80px;
+    margin-right: 20px;
+    background-color: var(--custom-color);
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.logout_button:hover {
+    background-color: #ffffff;
+    border: 2px solid var(--custom-color);
+    color: var(--custom-color);
+}
+
+.logout_button:active {
+    background-color: #fafafa;
+    border: 2px solid var(--custom-color);
+    color: var(--custom-color);
+}
+
+.order {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background: linear-gradient(var(--lighter-color), #fff);
+}
+
+.find_button {
+    display: inline-block;
+    padding: 4px 25px;
+    margin-top: 50px;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    color: var(--custom-color);
+    font-size: 24px;
+    font-weight: normal;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.find_button:hover {
+    background-color: var(--custom-color);
+    color: #ffffff;
+}
+
+.find_button:active {
+    background-color: #e7e7e7;
+    border-color: #e7e7e7;
+    color: var(--custom-color);
+}
+
+.order__card{
+    margin: 15px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.order__header {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.order__teacher{
+    font-size: 18px;
+}
+
+.order__status {
+    font-size: 15px;
+    padding: 5px 20px;
+    color: #000000;
+    border-radius: 10px;
+}
+
+
+.order__desc {
+    font-size: 15px;
+}
+
+.order__price {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.order__phone {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.wait {
+    background-color: var(--wait-color);
+}
+
+.agree {
+    background-color: var(--agree-color);
+}
+
+.refuse {
+    background-color: var(--refuse-color);
+}
